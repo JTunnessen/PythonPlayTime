@@ -5,10 +5,12 @@ import webbrowser, sys, pyperclip
 
 if len(sys.argv) > 1:
 	# Get city, state from the command line.
-	city = ' '.join(sys.argv[1:])
-	state = ' '.join(sys.argv[1:])
+	city_state = ' '.join(sys.argv[1:])
 else:
 	# Get address from clipboard.
-	city_state = pyperclip.paste()
+	#city_state = pyperclip.paste()
+	break
 
-webbrowser.open('https://weather.yahoo.com/united-states/' + city_state)
+webbrowser.open('https://weather.yahoo.com/united-states/' + state + '/' + city)
+
+# DID NOT FINISH OR CLEAN UP ___ LOOKING FOR A BETTER WEATHER PAGE TO PLAY WITH
